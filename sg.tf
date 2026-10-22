@@ -5,21 +5,21 @@ resource "aws_security_group" "sg2026" {
     from_port = 22
     to_port = 22
     protocol = "tcp"
-    cidr_blocks = [var.cidr]
+    cidr_blocks = var.cidr
   }
 
   ingress {
     from_port = 80
     to_port = 80
     protocol = "tcp"
-    cidr_blocks = [var.cidr]
+    cidr_blocks = var.cidr
   }
 
   ingress {
     from_port = 0
     to_port = 0
     protocol = "ICMP"
-    cidr_blocks = [var.cidr]
+    cidr_blocks = var.cidr
   }
 
   egress {
