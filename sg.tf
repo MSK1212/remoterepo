@@ -26,6 +26,6 @@ resource "aws_security_group" "sg2026" {
     from_port = 0
     to_port = 0
     protocol = "-1"
-    cidr_blocks = [var.cidr]
+    cidr_blocks = var.cidr
   }
 }
